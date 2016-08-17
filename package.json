@@ -2,7 +2,6 @@
   "name": "starter",
   "version": "1.0.0",
   "description": "Architecture for frontend project",
-  "main": "index.js",
   "scripts": {
     "styles": "node tasks/npm/styles",
     "templates": "node tasks/npm/templates",
