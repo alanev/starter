@@ -9,7 +9,9 @@
     "scripts": "webpack",
     "images": "node tasks/npm/images",
     "watch": "node tasks/watch",
-    "test": "ava test/*.js"
+    "test": "ava test/*.js",
+    "test:scripts": "eslint '!(build)**/*.js'",
+    "posttest": "npm run test:scripts"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
     "browser-sync": "^2.14.0",
     "chokidar": "^1.6.0",
     "del": "^2.2.2",
+    "eslint": "^3.3.1",
     "glob": "^7.0.5",
     "imagemin": "^5.2.2",
     "imagemin-mozjpeg": "^6.0.0",
