@@ -1,9 +1,6 @@
 import test from 'ava'
 import stat from '../tasks/utils/stat'
 import { exec } from 'child_process'
-import { scripts } from '../package.json'
-delete scripts.test
-delete scripts.watch
 
 const tasks = [
 	{
@@ -54,7 +51,7 @@ test.before('remove build dir', () => {
 
 tasks.forEach(({ name, output }) => {
 	test(
-		'styles task',
+		`${name} task`,
 		t => run(`npm run ${name}`)
 			.then(() => {
 				return Promise
