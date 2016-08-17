@@ -1,0 +1,57 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Architecture for frontend project",
+  "main": "index.js",
+  "scripts": {
+    "styles": "node tasks/npm/styles",
+    "templates": "node tasks/npm/templates",
+    "scripts": "webpack",
+    "images": "node tasks/npm/images",
+    "watch": "node tasks/watch",
+    "test": "ava test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanev/starter.git"
+  },
+  "keywords": [
+    "start",
+    "architecture",
+    "boilerplate",
+    "kickstart"
+  ],
+  "author": "alanev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alanev/starter/issues"
+  },
+  "homepage": "https://github.com/alanev/starter#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "browser-sync": "^2.14.0",
+    "chokidar": "^1.6.0",
+    "del": "^2.2.2",
+    "glob": "^7.0.5",
+    "imagemin": "^5.2.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-webp": "^4.0.0",
+    "mkdirp": "^0.5.1",
+    "postcss": "^5.1.2",
+    "postcss-pack-alanev": "^1.0.2",
+    "postcss-scss": "^0.1.9",
+    "postxml": "^0.2.9",
+    "postxml-pack-alanev": "^1.0.0",
+    "webpack": "^1.13.1"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "os": [
+    "linux"
+  ]
+}
