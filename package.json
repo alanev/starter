@@ -10,10 +10,10 @@
     "images": "node tasks/npm/images",
     "watch": "node tasks/watch",
     "test": "ava test/*.js",
-    "test:scripts": "eslint '!(build)**/*.js'",
-    "posttest": "npm run test:scripts"
+    "test:scripts": "eslint '{modules,src,tasks,test}/**/*.js'",
     "test:styles": "stylelint '{modules,src}/**/*.scss'",
     "test:html": "htmlhint '{modules,src,build}/**/*.html'",
+    "posttest": "npm run test:scripts && npm run test:html && npm run test styles"
   },
   "repository": {
     "type": "git",
