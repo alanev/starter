@@ -1,5 +1,4 @@
 import test from 'ava'
-import del from 'del'
 import stat from '../tasks/utils/stat'
 import { exec } from 'child_process'
 import { scripts } from '../package.json'
@@ -57,11 +56,11 @@ tasks.forEach(({ name, output }) => {
 	test(
 		'styles task',
 		t => run(`npm run ${name}`)
-			.then(d => {
+			.then(() => {
 				return Promise
 					.all(output.map(path => stat(`../build/${path}`)))
-					.then(values => t.pass())
-					.catch(err => {
+					.then(() => t.pass())
+					.catch(({ path }) => {
 						console.log(`No ${path}`)
 						t.fail()
 					})
