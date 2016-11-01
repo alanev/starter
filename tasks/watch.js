@@ -44,3 +44,9 @@ watch(['modules/**/*.{png,jpg}'], watchOptions)
 		images([path])
 		console.log(path, 'added')
 	})
+
+watch(['modules.yml'])
+	.on('change', path => {
+		require('./modules')
+		console.log(path, 'changed')
+	})
