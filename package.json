@@ -9,6 +9,7 @@
     "scripts": "webpack",
     "images": "node tasks/npm/images",
     "watch": "node tasks/watch",
+    "build": "npm run images && npm run modernizr && npm run styles && npm run templates && npm run scripts && npm run scripts",
     "modernizr": "modernizr -c .modernizr.json -d build/",
     "test": "ava test/*.js",
     "test:scripts": "eslint '{modules,src,tasks,test}/**/*.js'",
