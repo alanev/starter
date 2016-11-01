@@ -5,12 +5,8 @@ const webp		= require('imagemin-webp')
 const imageminOptions = {
 	plugins:
 	[
-		mozjpeg({
-			targa: true
-		}),
-		pngquant({
-			quality: '65-80'
-		})
+		mozjpeg(),
+		pngquant()
 	]
 }
 const imageminOptionsWebp = {
